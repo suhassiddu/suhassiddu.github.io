@@ -1,12 +1,5 @@
 <!DOCTYPE html>
-<!--
-Author: Robert Lie (mobilefish.com)
-More information:
-https://www.mobilefish.com/developer/blockchain/blockchain_quickguide_ethereum_tools.html
 
-This demonstration Ethereum Dapp uses the DemoContract.sol contract
-https://www.mobilefish.com/download/ethereum/DemoContract.sol.txt
--->
 <html>
 <head>
 <title>Demonstration Ethereum Dapp</title>
@@ -344,7 +337,7 @@ const logDepositPromise = function(fromAddress, blockNumber){
         // An exception will be thrown after some time.
         // This is the Chrome console log message:
         // eventLogDeposit error = Error: Gateway timeout. The request took too long to process. This can happen when querying logs over too wide a block range.
-        // As a workaround i am not using﻿ toBlock: 'pending' or toBlock: 'latest'
+        // As a workaround i am not using toBlock: 'pending' or toBlock: 'latest'
         // but toBlock: blockNumber+1000
         eventLogDeposit.stopWatching();  // This is not working!
         resolve(result);
@@ -700,11 +693,6 @@ p, li { font-size: 1.8em; }
 <div id="header">
   <div id='intervalErrorMessage'></div>
   <h1>Demonstration Ethereum Dapp</h1>
-  This demonstration Ethereum Dapp interact with the <a href="https://www.mobilefish.com/download/ethereum/DemoContract.sol.txt">DemoContract.sol</a> contract using the web3.js library (v0.19.0). This web page will not work with web3.js library (v1.0.0).<br />
-  The web3.min.js (v0.19.0) library used by this web page can be downloaded from <a href="https://github.com/ethereum/web3.js/releases/tag/0.19.0">https://github.com/ethereum/web3.js/releases/tag/0.19.0</a>.<br />
-  Use Chrome browser and install the <a href="https://metamask.io">MetaMask plugin </a>(if you do not have a local Ethereum node running).<br />
-  Web3 JavaScript app API: <a href="https://github.com/ethereum/wiki/wiki/JavaScript-API">https://github.com/ethereum/wiki/wiki/JavaScript-API</a><br />
-  Solidity: <a href="https://solidity.readthedocs.io/en/develop/">https://solidity.readthedocs.io/en/develop/</a>
 </div>
 <!-- ================= END OF HEADER ================= -->
 

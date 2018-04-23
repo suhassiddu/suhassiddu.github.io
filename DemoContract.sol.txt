@@ -1,14 +1,5 @@
 pragma solidity ^0.4.0;
 
-/*
-Author: Robert Lie (mobilefish.com)
-More information:
-https://www.mobilefish.com/developer/blockchain/blockchain_quickguide_ethereum_tools.html
-
-To interact with this contract use the demonstration Ethereum Dapp:
-https://www.mobilefish.com/download/ethereum/DemoDapp.html
-*/
-
 contract Mortal {
     /* Define variable owner of the type address*/
     address owner;
