@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/2.1.1/punycode.js"></script>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/2.1.1/punycode.js"></script>
+</head>
 
 <body>
 
@@ -13,7 +16,7 @@
         const punyHostname = punycode.toUnicode(url.hostname);
         const punyPathname = decodeURI(url.pathname);
         const punyURL = `${punyHostname}${punyPathname}`;
-        document.getElementById("demo").innerHTML = `<h6>${punyURL}</h6>`;
+        // document.getElementById("demo").innerHTML = `<h6>${punyURL}</h6>`;
         // Create clickable link using encoded href but Kannada label
         const a = document.createElement("a");
         a.href = `${url.protocol}//${punyURL}`;        // real encoded URL
