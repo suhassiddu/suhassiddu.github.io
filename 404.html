@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/punycode/2.1.1/punycode.js"></script>
+
 <body>
 
-<h1>ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ</h1>
+    <h1>ಅಸ್ತಿತ್ವದಲ್ಲಿಲ್ಲ</h1>
 
-<p id="demo"></p>
+    <p id="demo"></p>
 
-<script>
-document.getElementById("demo").textContent = `<h2>${window.location.href}</h2>`;
-</script>
+    <script>
+        const url = new URL(window.location.href);
+        const punyHostname = punycode.toUnicode(url.hostname);
+        const punyPathname = decodeURI(url.pathname);
+        const punyURL = `${punyHostname}${punyPathname}`;
+        document.getElementById("demo").innerHTML = `<h6>${punyURL}</h6>`;
+        // Create clickable link using encoded href but Kannada label
+        const a = document.createElement("a");
+        a.href = `${url.protocol}//${punyURL}`;        // real encoded URL
+        a.textContent = punyURL; // Kannada text
+        a.target = "_blank";
+
+        document.getElementById("demo").appendChild(a);
+    </script>
 
 </body>
+
 </html>
